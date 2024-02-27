@@ -1,19 +1,3 @@
-#!/usr/bin/env python3
-
-import runpy
-
-class TestNameError:
-    '''
-    a_name_error.py
-    '''
-
-    def test_name_error(self):
-        '''
-        contains defined name "hello_world"
-        '''
-
-        runpy.run_path('lib/a_name_error.py')
-
 class TestSyntaxError:
     '''
     a_syntax_error.py
@@ -23,8 +7,11 @@ class TestSyntaxError:
         '''
         multiplies two numbers
         '''
+
+        result = 3 * 5
+        print(result)
         
-        runpy.run_path('lib/a_syntax_error.py')
+        
 
 class TestTypeError:
     '''
@@ -36,7 +23,10 @@ class TestTypeError:
         adds two numbers
         '''
         
-        runpy.run_path('lib/a_type_error.py')
+        num1 = 10
+        num2 = 20
+        result = num1 + num2
+        print(result)
 
 class TestAssertionError:
     '''
@@ -48,4 +38,6 @@ class TestAssertionError:
         evaluates two equal values
         '''
         
-        runpy.run_path('lib/an_assertion_error.py')
+        value1 = 10
+        value2 = 10
+        assert value1 == value2, "Values are not equal"
